@@ -17,10 +17,10 @@
     <div class="categorias">
 
         <button onclick="mostrarCategoria()">💕 Cortesías</button>
-        <button>💧 Necesito</button>
-        <button>💭 Emociones</button>
-        <button>❓ Preguntas</button>
-        <button>👥 Personas</button>
+        <button onclick="mostrarNecesito()">💧 Necesito</button>
+        <button onclick="mostrarEmociones()">💭 Emociones</button>
+        <button onclick="mostrarPreguntas()">❓ Preguntas</button>
+        <button onclick="mostrarPersonas()">👥 Personas</button>
 
     </div>
     <div id="contenido"></div>
@@ -55,7 +55,107 @@
         <button onclick="hablar('Está bien')">👍 Está bien</button>
         <button onclick="hablar('Felicidades')">🎉 Felicidades</button>
 
+        <button onclick="inicio()">← Regresar</button>
+
     `;
+    
+}
+function mostrarNecesito() {
+
+    document.getElementById("contenido").innerHTML = `
+
+        <h2>💧 Necesito</h2>
+
+        <button onclick="hablar('Quiero tomar agua')">💧 Agua</button>
+        <button onclick="hablar('Quiero comer')">🍎 Comida</button>
+        <button onclick="hablar('Quiero dormir')">😴 Dormir</button>
+        <button onclick="hablar('Necesito mi medicina')">💊 Medicina</button>
+        <button onclick="hablar('Necesito ir al baño')">🚽 Baño</button>
+        <button onclick="hablar('Quiero descansar')">🛋️ Descansar</button>
+        <button onclick="hablar('Necesito a alguien')">🧍 Necesito a alguien</button>
+        <button onclick="hablar('Tengo calor')">🌡️ Tengo calor</button>
+        <button onclick="hablar('Tengo frío')">🧥 Tengo frío</button>
+        <button onclick="hablar('Me duele')">🤕 Me duele</button>
+
+        <button onclick="inicio()">← Regresar</button>
+
+    `;
+}
+    function mostrarEmociones() {
+
+    document.getElementById("contenido").innerHTML = `
+    
+        <h2>💭 Emociones</h2>
+
+        <button onclick="hablar('Estoy feliz')">😊 Feliz</button>
+        <button onclick="hablar('Estoy triste')">😢 Triste</button>
+        <button onclick="hablar('Estoy enojada')">😡 Enojada</button>
+        <button onclick="hablar('Tengo miedo')">😨 Miedo</button>
+        <button onclick="hablar('Tengo sueño')">😴 Sueño</button>
+        <button onclick="hablar('Estoy cansada')">😩 Cansada</button>
+        <button onclick="hablar('Estoy aburrida')">😐 Aburrida</button>
+        <button onclick="hablar('Estoy nerviosa')">😰 Nerviosa</button>
+        <button onclick="hablar('Estoy emocionada')">🤩 Emocionada</button>
+        <button onclick="hablar('Estoy confundida')">😕 Confundida</button>
+
+        <button onclick="inicio()">← Regresar</button>
+
+    `;
+    
+}
+ function mostrarPreguntas() {
+
+    document.getElementById("contenido").innerHTML = `
+    
+        <h2>❓ Preguntas</h2>
+
+        <button onclick="hablar('¿A dónde vamos?')">📍 ¿A dónde vamos?</button>
+        <button onclick="hablar('¿Cómo?')">👀 ¿Cómo?</button>
+        <button onclick="hablar('¿Qué es eso?')">❓ ¿Qué es eso?</button>
+        <button onclick="hablar('¿Qué pasa?')">🤔 ¿Qué pasa?</button>
+        <button onclick="hablar('¿Quién es?')">👤 ¿Quién es?</button>
+        <button onclick="hablar('¿Qué hora es?')">🕐 ¿Qué hora es?</button>
+        <button onclick="hablar('¿Puedo?')">🙋 ¿Puedo?</button>
+        <button onclick="hablar('¿Me ayudas?')">🆘 ¿Me ayudas?</button>
+        <button onclick="hablar('¿Ya nos vamos?')">🚪 ¿Ya nos vamos?</button>
+        <button onclick="hablar('¿Cuándo?')">📅 ¿Cuándo?</button>
+
+        <button onclick="inicio()">← Regresar</button>
+
+    `;
+    
+}
+
+ function mostrarPersonas() {
+
+    document.getElementById("contenido").innerHTML = `
+    
+        <h2>👥 Personas</h2>
+
+        <button onclick="hablar('Mamá')">👩 Mamá</button>
+        <button onclick="hablar('Papá')">👨 Papá</button>
+        <button onclick="hablar('Hermana')">👧 Hermana</button>
+        <button onclick="hablar('Hermano')">👦 Hermano</button>
+        <button onclick="hablar('Abuela')">👵 Abuela</button>
+        <button onclick="hablar('Abuelo')">👴 Abuelo</button>
+        <button onclick="hablar('Tía')">👩 Tía</button>
+        <button onclick="hablar('Tío')">👨 Tío</button>
+        <button onclick="hablar('Mi familia')">❤️ Mi familia</button>
+        <button onclick="hablar('Quiero estar con mi familia')">🏠 Quiero estar con mi familia</button>
+        <button onclick="hablar('Maestra')">👩‍🏫 Maestra</button>
+        <button onclick="hablar('Maestro')">👨‍🏫 Maestro</button>
+        <button onclick="hablar('Doctora')">👩‍⚕️ Doctora</button>
+        <button onclick="hablar('Doctor')">👨‍⚕️ Doctor</button>
+        <button onclick="hablar('Enfermera')">👩‍⚕️ Enfermera</button>
+        <button onclick="hablar('Enfermero')">👨‍⚕️ Enfermero</button>
+
+        <button onclick="inicio()">← Regresar</button>
+
+    `;
+    
+}
+function inicio() {
+    location.reload();
 }
 
 </script>
