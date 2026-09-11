@@ -1,26 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>ChittChatt</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+   <body>
+
     <h1>ChittChatt</h1>
 
-    <button onclick="hablar()">Hola, bienvenido a ChittChatt</button>
+    <h2>¿Qué quieres comunicar?</h2>
+
+    <div class="categorias">
+
+        <button onclick="mostrarCategoria()">💕 Cortesías</button>
+        <button>💧 Necesito</button>
+        <button>💭 Emociones</button>
+        <button>❓ Preguntas</button>
+        <button>👥 Personas</button>
+
+    </div>
+    <div id="contenido"></div>
 
     <script>
 
-        function hablar() {
+        function hablar(texto) {
 
-            const mensaje = new SpeechSynthesisUtterance("Bienvenido");
+            const mensaje = new SpeechSynthesisUtterance(texto);
 
             speechSynthesis.speak(mensaje);
 
         }
 
     </script>
+    <script>
+
+    function mostrarCategoria() {
+
+    document.getElementById("contenido").innerHTML = `
+    
+        <h2>💕 Cortesías</h2>
+
+        <button onclick="hablar('Hola')">👋 Hola</button>
+        <button onclick="hablar('Adiós')">👋 Adiós</button>
+        <button onclick="hablar('Buenos días')">☀️ Buenos días</button>
+        <button onclick="hablar('Buenas noches')">🌙 Buenas noches</button>
+        <button onclick="hablar('Gracias')">🙏 Gracias</button>
+        <button onclick="hablar('Por favor')">🥺 Por favor</button>
+        <button onclick="hablar('Perdón')">🙇 Perdón</button>
+        <button onclick="hablar('Te quiero')">💗 Te quiero</button>
+        <button onclick="hablar('Está bien')">👍 Está bien</button>
+        <button onclick="hablar('Felicidades')">🎉 Felicidades</button>
+
+    `;
+}
+
+</script>
 
 </body>
+
 </html>
