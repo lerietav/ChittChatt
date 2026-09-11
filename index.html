@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChittChatt</title>
+</head>
+
+<body>
+
+    <h1>ChittChatt</h1>
+
+    <button onclick="hablar()">Hola, bienvenido a ChittChatt</button>
+
+    <script>
+
+        function hablar() {
+
+            const mensaje = new SpeechSynthesisUtterance("Bienvenido");
+
+            speechSynthesis.speak(mensaje);
+
+        }
+
+    </script>
+
+</body>
+</html>
